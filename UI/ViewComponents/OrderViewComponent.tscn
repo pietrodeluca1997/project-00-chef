@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7hs7kjb2jwvj"]
+
+[ext_resource type="Script" path="res://Scripts/Game/UI/ViewComponents/OrderViewComponent.cs" id="1_0lbtb"]
+[ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="1_v308f"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g2o65"]
+font_size = 20
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.403922)
+
+[node name="Order" type="Control"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 100.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_0lbtb")
+
+[node name="OrderBackground" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 100.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+color = Color(1, 0.419608, 0, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="OrderBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -25.5
+offset_right = 25.5
+offset_bottom = 23.0
+grow_horizontal = 2
+
+[node name="TableLabel" type="Label" parent="OrderBackground/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Table: "
+label_settings = SubResource("LabelSettings_g2o65")
+
+[node name="TableNumberLabel" type="Label" parent="OrderBackground/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "0
+"
+label_settings = SubResource("LabelSettings_g2o65")
+
+[node name="RecipeNameLabel" type="Label" parent="OrderBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -21.0
+offset_right = 92.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+text = "Simple Salad"
+label_settings = ExtResource("1_v308f")

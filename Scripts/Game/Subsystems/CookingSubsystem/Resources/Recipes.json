@@ -1,0 +1,16 @@
+[
+	{
+	  "name": "Simple Salad",
+		"requirements": [
+			{
+				"ingredientName": "Tomato",
+				"requiredStates": [ "Sliced", "Washed" ]
+			},
+			{
+				"ingredientName": "Lettuce",
+				"requiredStates": [ "Sliced", "Washed" ]
+			}
+		]	  
+	}
+]
+

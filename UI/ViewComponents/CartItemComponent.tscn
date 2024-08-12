@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://cybnccp256mxu"]
+
+[ext_resource type="Script" path="res://Scripts/Game/UI/ViewComponents/CartItemComponent.cs" id="1_4v77k"]
+[ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="2_xuq78"]
+
+[node name="CartItemComponent" type="Control"]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 200.0
+offset_bottom = 100.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("1_4v77k")
+
+[node name="ItemBackground" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 1
+offset_right = 200.0
+offset_bottom = 100.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+mouse_filter = 1
+color = Color(0, 0, 0.439216, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ItemBackground"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="PickButton" type="Button" parent="ItemBackground/HBoxContainer"]
+layout_mode = 2
+text = "<-"
+
+[node name="ItemNameLabel" type="Label" parent="ItemBackground/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "Lettuce"
+label_settings = ExtResource("2_xuq78")
+
+[node name="ItemCount" type="Label" parent="ItemBackground/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+text = "1"
+label_settings = ExtResource("2_xuq78")

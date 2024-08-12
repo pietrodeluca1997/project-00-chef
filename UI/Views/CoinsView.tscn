@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=3 uid="uid://dlu5tyms6meh0"]
+
+[ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="1_4r11i"]
+[ext_resource type="Script" path="res://Scripts/Game/UI/Views/ViewControllers/CoinsViewController.cs" id="1_dg48v"]
+[ext_resource type="Texture2D" uid="uid://chc3my6c221w1" path="res://Assets/ThirdParty/ItchIO/Icons/CoinsChestsSpritesheet.png" id="1_jnx8r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_unvht"]
+atlas = ExtResource("1_jnx8r")
+region = Rect2(176, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lxq1"]
+atlas = ExtResource("1_jnx8r")
+region = Rect2(192, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0lff"]
+atlas = ExtResource("1_jnx8r")
+region = Rect2(208, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4px7i"]
+atlas = ExtResource("1_jnx8r")
+region = Rect2(224, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5d8n1"]
+atlas = ExtResource("1_jnx8r")
+region = Rect2(240, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wnqc"]
+atlas = ExtResource("1_jnx8r")
+region = Rect2(256, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7vsn"]
+atlas = ExtResource("1_jnx8r")
+region = Rect2(272, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pglbr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_unvht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lxq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0lff")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4px7i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5d8n1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wnqc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7vsn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CoinsView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dg48v")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+offset_right = 1920.0
+offset_bottom = 76.0
+mouse_filter = 1
+color = Color(0.192157, 0.192157, 0.192157, 0)
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -116.0
+offset_top = -21.0
+offset_bottom = 21.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_right = 25
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+alignment = 2
+
+[node name="Control" type="Control" parent="Background/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/MarginContainer/HBoxContainer/Control"]
+texture_filter = 1
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_pglbr")
+autoplay = "default"
+frame_progress = 0.469866
+
+[node name="CoinsLabel" type="Label" parent="Background/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "000
+"
+label_settings = ExtResource("1_4r11i")

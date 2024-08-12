@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://cfxqg3e6sgo1a"]
+
+[ext_resource type="Script" path="res://Scripts/Game/UI/HUD/PlayerHUD.cs" id="1_ugyyy"]
+[ext_resource type="PackedScene" uid="uid://t4tp523cnrj2" path="res://UI/Views/OrdersView.tscn" id="2_2rct4"]
+[ext_resource type="PackedScene" uid="uid://bw8flqun3bi3" path="res://UI/Views/SettingsView.tscn" id="3_nk2x6"]
+[ext_resource type="PackedScene" uid="uid://dlu5tyms6meh0" path="res://UI/Views/CoinsView.tscn" id="4_3w747"]
+
+[node name="PlayerHUD" type="CanvasLayer"]
+script = ExtResource("1_ugyyy")
+
+[node name="OrdersView" parent="." instance=ExtResource("2_2rct4")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="SupplyTradeViewParent" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="CoinsView" parent="." instance=ExtResource("4_3w747")]
+
+[node name="SettingsView" parent="." instance=ExtResource("3_nk2x6")]
+visible = false
+size_flags_horizontal = 0
+mouse_filter = 1

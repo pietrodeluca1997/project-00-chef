@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://dme4a5la1wcku"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_7n2bn"]
+lifetime_randomness = 1.0
+emission_shape = 3
+emission_box_extents = Vector3(30, 5, 30)
+direction = Vector3(1, 0, 1)
+flatness = 1.0
+initial_velocity_min = -2.0
+initial_velocity_max = 2.0
+gravity = Vector3(0, 0, 0)
+turbulence_noise_strength = 0.1
+turbulence_noise_scale = 3.0
+turbulence_noise_speed_random = 4.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_14mxs"]
+transparency = 1
+blend_mode = 1
+cull_mode = 2
+vertex_color_use_as_albedo = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tw0ml"]
+material = SubResource("StandardMaterial3D_14mxs")
+size = Vector2(0.2, 0.2)
+orientation = 0
+
+[node name="DustParticle" type="GPUParticles3D"]
+amount = 200
+lifetime = 30.0
+randomness = 1.0
+process_material = SubResource("ParticleProcessMaterial_7n2bn")
+draw_pass_1 = SubResource("PlaneMesh_tw0ml")

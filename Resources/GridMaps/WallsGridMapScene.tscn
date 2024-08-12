@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bdhiiay2ruors"]
+
+[ext_resource type="MeshLibrary" uid="uid://cphdknae3osp3" path="res://Resources/GridMaps/Walls.tres" id="1_fiwo7"]
+
+[node name="GridMap" type="GridMap"]
+mesh_library = ExtResource("1_fiwo7")
+cell_size = Vector3(1, 1, 1)
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false

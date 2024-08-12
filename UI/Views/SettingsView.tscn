@@ -1,0 +1,227 @@
+[gd_scene load_steps=5 format=3 uid="uid://bw8flqun3bi3"]
+
+[ext_resource type="Script" path="res://Scripts/Game/UI/Views/ViewControllers/SettingsViewController.cs" id="1_0k6rl"]
+[ext_resource type="LabelSettings" uid="uid://k58c5n2e4w34" path="res://Scripts/Game/UI/Views/Assets/GraphicsOptionsLabelSettings.tres" id="1_c8d3y"]
+[ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="1_d5srq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kw67y"]
+font_size = 30
+
+[node name="SettingsView" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0k6rl")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.192157, 0.192157, 0.192157, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="Container" type="VBoxContainer" parent="Background/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="GameSettingsLabel" type="Label" parent="Background/MarginContainer/Container"]
+layout_mode = 2
+text = "GAME SETTINGS"
+label_settings = SubResource("LabelSettings_kw67y")
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="GraphicsDelimiter" type="HBoxContainer" parent="Background/MarginContainer/Container"]
+layout_mode = 2
+
+[node name="GraphicsLabel" type="Label" parent="Background/MarginContainer/Container/GraphicsDelimiter"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Graphics"
+label_settings = ExtResource("1_d5srq")
+
+[node name="ColorRect" type="ColorRect" parent="Background/MarginContainer/Container/GraphicsDelimiter"]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="Background/MarginContainer/Container"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 40
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 50
+
+[node name="LeftGraphicsContainer" type="VBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="ScreenSpaceAA" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/ScreenSpaceAA"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Screen space AA"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="OptionButton" type="OptionButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/ScreenSpaceAA"]
+layout_mode = 2
+size_flags_horizontal = 11
+item_count = 2
+selected = 0
+popup/item_0/text = "Disabled (Fastest)"
+popup/item_0/id = 0
+popup/item_1/text = "FXAA (Fast)"
+popup/item_1/id = 1
+
+[node name="MSAA3D" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/MSAA3D"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MSAA 3D"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="OptionButton" type="OptionButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/MSAA3D"]
+layout_mode = 2
+size_flags_horizontal = 3
+item_count = 4
+selected = 0
+popup/item_0/text = "Disabled (Fastest)"
+popup/item_0/id = 0
+popup/item_1/text = "2x (Average)"
+popup/item_1/id = 1
+popup/item_2/text = "4x (Slow)"
+popup/item_2/id = 2
+popup/item_3/text = "8x (Slowest)"
+popup/item_3/id = 3
+
+[node name="TAA" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/TAA"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "TAA
+"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="CheckButton" type="CheckButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/TAA"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="Reflections" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/Reflections"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Reflections
+"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="CheckButton" type="CheckButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/Reflections"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="AmbientOcclusion" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/AmbientOcclusion"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ambient occlusion
+"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="CheckButton" type="CheckButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/AmbientOcclusion"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="IndirectLightining" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/IndirectLightining"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Indirect lighting
+"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="CheckButton" type="CheckButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/IndirectLightining"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="GlobalIllumination" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/GlobalIllumination"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Global illumination
+"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="CheckButton" type="CheckButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/GlobalIllumination"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[node name="DisplayFPS" type="HBoxContainer" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/DisplayFPS"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Display FPS"
+label_settings = ExtResource("1_c8d3y")
+
+[node name="CheckButton" type="CheckButton" parent="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/DisplayFPS"]
+layout_mode = 2
+size_flags_horizontal = 2
+
+[connection signal="item_selected" from="Background/MarginContainer/Container/MarginContainer/HBoxContainer/LeftGraphicsContainer/ScreenSpaceAA/OptionButton" to="." method="OnScreenSpaceOptionChange"]

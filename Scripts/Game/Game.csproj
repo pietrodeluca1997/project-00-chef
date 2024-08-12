@@ -1,0 +1,16 @@
+﻿<Project Sdk="Godot.NET.Sdk/4.2.2">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net7.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'ios' ">net8.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <RootNamespace>Game</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Subsystems\CookingSubsystem\Resources\Ingredients.json" />
+    <Content Include="Subsystems\CookingSubsystem\Resources\Recipes.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DevelopmentKit\DevelopmentKit.csproj" />
+  </ItemGroup>
+</Project>
