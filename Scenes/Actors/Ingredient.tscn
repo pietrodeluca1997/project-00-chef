@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://blhfa5eddcs0g"]
 
-[ext_resource type="Script" path="res://Scripts/Game/Subsystems/CookingSubsystem/Entities/CookingIngredient.cs" id="1_mdbrw"]
+[ext_resource type="Script" uid="uid://wh243f0qirul" path="res://Scripts/Game/Subsystems/CookingSubsystem/Entities/CookingIngredient.cs" id="1_mdbrw"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_5whu0"]
 size = Vector3(1.5, 1, 1.5)

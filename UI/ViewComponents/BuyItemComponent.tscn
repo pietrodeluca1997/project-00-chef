@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bx2i580sji0wx"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/ViewComponents/BuyItemComponent.cs" id="1_1jnll"]
+[ext_resource type="Script" uid="uid://fvnrgk5r6fxi" path="res://Scripts/Game/UI/ViewComponents/BuyItemComponent.cs" id="1_1jnll"]
 [ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="2_5i11n"]
 
 [node name="BuyItemComponent" type="Control"]

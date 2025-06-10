@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cybnccp256mxu"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/ViewComponents/CartItemComponent.cs" id="1_4v77k"]
+[ext_resource type="Script" uid="uid://8ngwtsrok04r" path="res://Scripts/Game/UI/ViewComponents/CartItemComponent.cs" id="1_4v77k"]
 [ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="2_xuq78"]
 
 [node name="CartItemComponent" type="Control"]

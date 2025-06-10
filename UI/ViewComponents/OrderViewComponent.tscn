@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c7hs7kjb2jwvj"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/ViewComponents/OrderViewComponent.cs" id="1_0lbtb"]
+[ext_resource type="Script" uid="uid://b7h3fws07uu56" path="res://Scripts/Game/UI/ViewComponents/OrderViewComponent.cs" id="1_0lbtb"]
 [ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="1_v308f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_g2o65"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://t4tp523cnrj2"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/Views/ViewControllers/OrdersViewController.cs" id="1_tqel0"]
+[ext_resource type="Script" uid="uid://c1pd4fyethl0c" path="res://Scripts/Game/UI/Views/ViewControllers/OrdersViewController.cs" id="1_tqel0"]
 
 [node name="OrdersView" type="Control"]
 layout_mode = 3

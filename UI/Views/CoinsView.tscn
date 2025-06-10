@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://dlu5tyms6meh0"]
 
 [ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="1_4r11i"]
-[ext_resource type="Script" path="res://Scripts/Game/UI/Views/ViewControllers/CoinsViewController.cs" id="1_dg48v"]
+[ext_resource type="Script" uid="uid://2hn3vjoap2a8" path="res://Scripts/Game/UI/Views/ViewControllers/CoinsViewController.cs" id="1_dg48v"]
 [ext_resource type="Texture2D" uid="uid://chc3my6c221w1" path="res://Assets/ThirdParty/ItchIO/Icons/CoinsChestsSpritesheet.png" id="1_jnx8r"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_unvht"]

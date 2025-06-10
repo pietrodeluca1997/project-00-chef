@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bw8flqun3bi3"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/Views/ViewControllers/SettingsViewController.cs" id="1_0k6rl"]
+[ext_resource type="Script" uid="uid://de1fkwddytqqo" path="res://Scripts/Game/UI/Views/ViewControllers/SettingsViewController.cs" id="1_0k6rl"]
 [ext_resource type="LabelSettings" uid="uid://k58c5n2e4w34" path="res://Scripts/Game/UI/Views/Assets/GraphicsOptionsLabelSettings.tres" id="1_c8d3y"]
 [ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="1_d5srq"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7ljamrilogcn"]
 
-[ext_resource type="Script" path="res://Scripts/Game/UI/Views/ViewControllers/SupplyTradeViewController.cs" id="1_plgs8"]
+[ext_resource type="Script" uid="uid://b76swlt0we5vx" path="res://Scripts/Game/UI/Views/ViewControllers/SupplyTradeViewController.cs" id="1_plgs8"]
 
 [node name="SupplyTradeView" type="Control"]
 layout_mode = 3

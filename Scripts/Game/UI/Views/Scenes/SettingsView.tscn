@@ -1,8 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmvp2v8bjl0m7"]
 
-[ext_resource type="LabelSettings" uid="uid://k58c5n2e4w34" path="res://UI/Views/Assets/GraphicsOptionsLabelSettings.tres" id="1_c8d3y"]
-[ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://UI/Views/Assets/TitleLabelSettings.tres" id="1_d5srq"]
-[ext_resource type="Script" path="res://UI/Views/ViewControllers/SettingsViewController.cs" id="1_mgt2y"]
+[ext_resource type="LabelSettings" uid="uid://k58c5n2e4w34" path="res://Scripts/Game/UI/Views/Assets/GraphicsOptionsLabelSettings.tres" id="1_c8d3y"]
+[ext_resource type="LabelSettings" uid="uid://etjh6dukp1vl" path="res://Scripts/Game/UI/Views/Assets/TitleLabelSettings.tres" id="1_d5srq"]
+
+[sub_resource type="Resource" id="Resource_rmd5d"]
+metadata/__load_path__ = "res://UI/Views/ViewControllers/SettingsViewController.cs"
 
 [sub_resource type="LabelSettings" id="LabelSettings_kw67y"]
 font_size = 30
@@ -10,7 +12,7 @@ font_size = 30
 [node name="SettingsView" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_mgt2y")
+script = SubResource("Resource_rmd5d")
 
 [node name="Background" type="ColorRect" parent="."]
 layout_mode = 1
